@@ -1,0 +1,1 @@
+This folder contains the strategy pattern and the MiniDuckSimulator that test the files
