@@ -53,7 +53,7 @@ class WeatherData implements Subject
      *
      * @param Observer $observer This is the observer to add
      */
-    public function registerObserver( Observer $observer )
+    public function registerObserver( ObserverElement $observer )
     {
         array_push( $this->array_observers, $observer );
     }
@@ -63,7 +63,7 @@ class WeatherData implements Subject
      *
      * @param Observer $observer This is the observer to remove
      */
-    public function removeObserver( Observer $observer)
+    public function removeObserver( ObserverElement $observer)
     {
         foreach ( $this->array_observers as $key => $value)
         {
@@ -81,11 +81,14 @@ class WeatherData implements Subject
      */
     public function notifyObservers()
     {
-        for( $index = 0; $index < array_count_values( $this->array_observers ); $index++ )
+
+        if ( isset ( $this->array_observers ) )
         {
-            echo 'Hola!';
-            $observer = $this->array_observers[$index];
-            $observer->update( $this->temperature, $this->humidity, $this->pressure );
+            foreach ( $this->array_observers as $key => $value )
+            {
+                $observer = $this->array_observers[$key];
+                $observer->update( $this->temperature, $this->humidity, $this->pressure );
+            }
         }
     }
 

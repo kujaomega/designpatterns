@@ -1,0 +1,2 @@
+One problem I have had in this design pattern is that when the ObserverElement interface is named "Observed", the browser don't recognise the Observer interface.
+Fatal error: Interface 'Observer' not found in /home/kujaomega/git/designpatterns/observer/php/currentconditionsdisplay.php on line 14

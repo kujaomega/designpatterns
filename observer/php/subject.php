@@ -17,14 +17,14 @@ interface Subject
      *
      * @param Observer observer
      */
-    public function registerObserver( Observer $observer );
+    public function registerObserver( ObserverElement $observer );
 
     /**
      * This method is the removeObservers.
      *
      * @param Observer observer
      */
-    public function removeObserver( Observer $observer );
+    public function removeObserver( ObserverElement $observer );
 
     /**
      * This is the notifyObservers method.

@@ -10,7 +10,7 @@
  *
  * class CurrentConditionsDisplay
  */
-class CurrentConditionsDisplay implements DisplayElement, Observer
+class CurrentConditionsDisplay implements DisplayElement, ObserverElement
 {
     /**
      * This is the temperature.
@@ -64,6 +64,6 @@ class CurrentConditionsDisplay implements DisplayElement, Observer
      */
     public function display()
     {
-        echo ( '<br> The current Conditions: '.$this->temperature.' º Degrees and '.$this->humidity.' % humidity.');
+        echo ( '<br> The current Conditions: '.$this->temperature.' Degrees and '.$this->humidity.' % humidity.');
     }
 }
