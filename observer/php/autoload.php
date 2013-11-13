@@ -11,9 +11,9 @@
  *
  * @param $className
  */
-
 function __autoload( $className )
 {
+    echo 'El nom de la classe es: '.$className.'<br>';
     $className = ltrim( $className, '\\' );
     $fileName  = '';
     $namespace = '';
@@ -24,7 +24,9 @@ function __autoload( $className )
         $fileName  = str_replace( '\\', DIRECTORY_SEPARATOR, $namespace ) . DIRECTORY_SEPARATOR;
     }
     $fileName .= str_replace( '_', DIRECTORY_SEPARATOR, $className ) . '.php';
+
     $fileName = strtolower( $fileName );
+    echo 'Arxiu requerit: '.$fileName.'<br>';
     require $fileName;
 }
 

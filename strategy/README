@@ -1,5 +1,5 @@
 The objective of the strategy pattern is include classes inside another class.
-One thing I have learnt in this pattern is that if you have got a method with the same name of the class, when you instance the class, you call the method of the class. Example:
+One thing I have learnt in this php pattern is that if you have got a method with the same name of the class, when you instance the class, you call the method of the class. Example:
 
 class Quack implements QuackBehavior
 {
