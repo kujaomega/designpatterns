@@ -1,0 +1,4 @@
+To get files from a samba server, I use a smb wrapper. Then, I include my php file using this code:
+
+include_once('smb.php');
+include( 'smb://user:password@server/folder/file.php');
