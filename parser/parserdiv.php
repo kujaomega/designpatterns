@@ -2,7 +2,7 @@
 include( 'pegCurlRequest.php');
 
 $username = 'matraca';
-$password = '****';
+$password = '1234567';
 $loginUrl = 'http://www.basketpc.com/index.php?mod=autentificacion';
 
 //init curl
@@ -39,16 +39,16 @@ for( $i =0; $i <2; ++$i)
 {
     //echo'<h1> '.$i.'</h1>';
 
-    curl_setopt($ch, CURLOPT_URL, 'http://www.basketpc.com/index.php?mod=busqueda_jugador&pagina='.$i.'&orden=&sentido=asc');
+    curl_setopt($ch, CURLOPT_URL, 'http://www.basketpc.com/index.php?mod=busqueda_jugador&pagina='.$i.'&orden=&sentido=asc#');
 
 //execute the request
     $content = curl_exec($ch);
     $result = explode ('<tbody>', $content );
 
     //var_dump($result);
-    $result2 = explode ('</tbody>', $result[1]);
-    var_dump($result2[0]);
-    //explode$result2[0];
+    //$result2 = explode ('</tbody>', $result[1]);
+    //var_dump($result2[0]);
+    var_dump( $result[1] );
 
     //usleep(50000);
 }
